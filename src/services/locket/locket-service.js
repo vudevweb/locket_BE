@@ -16,8 +16,8 @@ const login = async (email, password) => {
     const requestData = JSON.stringify({
         email: decryptedEmail,
         password: decryptedPassword,
-        returnSecureToken: true,
         clientType: "CLIENT_TYPE_IOS",
+        returnSecureToken: true,
     });
 
     try {
@@ -28,11 +28,10 @@ const login = async (email, password) => {
         });
 
         if (!response.ok) {
-            throw new Error(`Login failed: ${response.statusText}`);
+            throw new Error(`Lỗi đăng nhập: ${response.statusText}`);
         }
 
         const data = await response.json();
-
         logInfo("login Locket", "End");
         return data;
     } catch (error) {

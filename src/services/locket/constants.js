@@ -1,6 +1,7 @@
+
 const constants = {
     LOGIN_URL:
-        "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=<your api key>",
+        `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCQngaaXQIfJaH0aS2l7REgIjD7nL431So`,
     LOGIN_HEADERS: {
         Accept: "*/*",
         "Accept-Encoding": "gzip, deflate, br",

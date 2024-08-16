@@ -15,7 +15,6 @@ class LocketController {
         try {
             const { userId, idToken, caption } = req.body;
             const { images, videos } = req.files;
-
             if (!images && !videos) {
                 return res.status(400).json({
                     message: "No media found",

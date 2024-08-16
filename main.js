@@ -20,7 +20,7 @@ app.use(
     cors({
         origin: ["http://localhost:3000", "https://locket-uploader.vercel.app"],
         methods: ["GET", "POST"],
-
+        
         // Nhằm cho phép client gửi cookie lên server
         credentials: true,
     })
@@ -39,5 +39,5 @@ app.use(errorHandler);
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-    logInfo("main.js", `Server backend is running at localhost:${PORT}`);
+    logInfo("main.js", `Server đang chạy ở port:${PORT}`);
 });

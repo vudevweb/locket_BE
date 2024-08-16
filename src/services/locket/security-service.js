@@ -4,7 +4,6 @@ const { logInfo, logError } = require("../logger.service.js");
 const decryptLoginData = (encryptedEmail, encryptedPassword) => {
     try {
         logInfo("decryptLoginData", "Start decrypting login data");
-
         const secretKey = process.env.HASH_SECRET_KEY;
         const decryptedEmail = CryptoJS.AES.decrypt(
             encryptedEmail,
