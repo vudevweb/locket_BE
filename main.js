@@ -22,7 +22,7 @@ app.use(
       "http://localhost:3000",
       "https://locket-fe.vercel.app",
       "https://locket.vudevweb.com",
-      "https://locket.vudev.tech/",
+      "https://locket.vudev.tech",
     ],
     methods: ["GET", "POST"],
 
