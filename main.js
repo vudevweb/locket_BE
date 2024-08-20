@@ -2,9 +2,9 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 const envFile =
-    process.env.NODE_ENV === "production"
-        ? ".env.production"
-        : ".env.development";
+  process.env.NODE_ENV === "production"
+    ? ".env.production"
+    : ".env.development";
 
 dotenv.config({ path: envFile });
 
@@ -17,13 +17,18 @@ const errorHandler = require("./src/helpers/error-handler.js");
 
 const app = express();
 app.use(
-    cors({
-        origin: ["http://localhost:3000", "https://locket-fe.vercel.app", 'https://locket.vudevweb.com'],
-        methods: ["GET", "POST"],
-        
-        // Nhằm cho phép client gửi cookie lên server
-        credentials: true,
-    })
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://locket-fe.vercel.app",
+      "https://locket.vudevweb.com",
+      "https://locket.vudev.tech/",
+    ],
+    methods: ["GET", "POST"],
+
+    // Nhằm cho phép client gửi cookie lên server
+    credentials: true,
+  })
 );
 
 app.use(cookieParser());
@@ -39,5 +44,5 @@ app.use(errorHandler);
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-    logInfo("main.js", `Server đang chạy ở port:${PORT}`);
+  logInfo("main.js", `Server đang chạy ở port:${PORT}`);
 });

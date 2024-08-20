@@ -31,6 +31,7 @@ const constants = {
             "com.locket.Locket/1.43.1 iPhone/17.3 hw/iPhone15_3 (GTMSUF/1)",
     },
     CREATE_POST_URL: "https://api.locketcamera.com/postMomentV2",
+    USER_URL: "https://api.locketcamera.com/getUser",
 };
 
 module.exports = constants;
